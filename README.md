@@ -9,6 +9,26 @@
 在成功申请CFPS数据后，请下载2018-2022年“个人库”数据压缩后放入“RAWDATA"文件夹
 
 <br>
+
+## 代码说明
+
+[R](https://www.r-project.org/) 4.5.0版本为本项目所使用的主要工具。
+
+本项目的package管理基于renv，请先安装renv并从renv.lock恢复package及其依赖。
+
+在成功构建环境后请运行[R/Train_Stage_Main.R](R/Train_Stage_Main.R)，以进行模型的训练和性能测试。
+
+本项目还设计了对独立测试集的检验，如需进行，请运行[R/Predict-Database.R](R/Predict-Database.R)
+
+<br>
+
+## shiny应用
+
+本项目已将构建的评价系统制作成shiny应用，目前其在线版本已发布到[shinyapp](http://zhangjs.shinyapps.io/shiny-app)
+
+如需在本地运行，请先将训练好的模型（全部代码运行后将会出现在目录：“data/learners”）复制到“shiny-app”文件夹中再运行。
+
+<br>
 <br>
 <br>
 <br>
